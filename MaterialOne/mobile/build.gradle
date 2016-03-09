@@ -20,7 +20,9 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-
+ 	    Properties properties = new Properties()
+            properties.load(project.rootProject.file('local.properties').newDataInputStream())
+            buildConfigField("String", "apikey", properties.getProperty("apikey"))
         }
     }
 }
