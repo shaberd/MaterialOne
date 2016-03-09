@@ -1,0 +1,22 @@
+<resources>
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+
+    <!-- Printer Entry -->
+    <dimen name="tab_height">54dp</dimen>
+    <dimen name="tab_padding">10dp</dimen>
+    <dimen name="button_corner_radius">32dp</dimen>
+    <dimen name="chevron_padding">5dp</dimen>
+    <dimen name="chevron_left_right_offset">10dp</dimen>
+    <dimen name="tab_x_offset">100px</dimen>
+    <dimen name="entry_image_size">100dp</dimen>
+    <dimen name="printer_entry_padding">8dp</dimen>
+    <dimen name="printer_icon_margin">15dp</dimen>
+    <dimen name="discovery_background_corner_radius">0dp</dimen>
+    <dimen name="printer_entry_spacing">10dp</dimen>
+    <dimen name="printer_entry_status_icon_size">20dp</dimen>
+    <dimen name="discovery_elevation">5dp</dimen>
+    <dimen name="small_margins">3dp</dimen>
+    <dimen name="collapse_icon_height">20dp</dimen>
+</resources>

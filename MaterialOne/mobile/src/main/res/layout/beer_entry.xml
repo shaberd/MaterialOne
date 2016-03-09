@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/discovery_card_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:clickable="true"
+    card_view:cardCornerRadius="@dimen/discovery_background_corner_radius">
+
+    <RelativeLayout
+        android:id="@+id/printer_entry_background"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/printer_entry_padding">
+
+        <ImageView
+            android:id="@+id/icon_iv"
+            android:layout_width="@dimen/entry_image_size"
+            android:layout_height="@dimen/entry_image_size"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            tools:src="@android:drawable/btn_star_big_on" />
+
+        <TextView
+            android:id="@+id/beer_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            android:ellipsize="middle"
+            android:gravity="start"
+            android:maxLines="1"
+            android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
+            android:layout_toStartOf="@+id/icon_iv"
+            android:textColor="@android:color/black"
+            tools:text="Beer Name" />
+
+        <TextView
+            android:id="@+id/abv_desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/beer_name"
+            android:layout_margin="5dp"
+            android:layout_alignParentStart="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:text="ABV:" />
+        <TextView
+            android:id="@+id/abv_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/beer_name"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@+id/abv_desc_tv"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            tools:text="abv" />
+
+        <TextView
+            android:id="@+id/ibu_desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/beer_name"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@id/abv_tv"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@android:color/black"
+            android:text="IBU:" />
+
+        <TextView
+            android:id="@+id/ibu_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/beer_name"
+            android:layout_margin="5dp"
+            android:layout_toEndOf="@+id/ibu_desc_tv"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            tools:text="ibu" />
+
+        <TextView
+            android:id="@+id/desc_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ibu_tv"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/icon_iv"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/black"
+            tools:text="description" />
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
