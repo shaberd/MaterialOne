@@ -15,13 +15,7 @@
         android:layout_height="wrap_content"
         android:padding="@dimen/printer_entry_padding">
 
-        <ImageView
-            android:id="@+id/icon_iv"
-            android:layout_width="@dimen/entry_image_size"
-            android:layout_height="@dimen/entry_image_size"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            tools:src="@android:drawable/btn_star_big_on" />
+
 
         <TextView
             android:id="@+id/beer_name"
@@ -29,21 +23,30 @@
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
             android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
             android:ellipsize="middle"
             android:gravity="start"
             android:maxLines="1"
             android:textAppearance="@android:style/TextAppearance.DeviceDefault.Large"
-            android:layout_toStartOf="@+id/icon_iv"
+            android:textStyle="bold"
             android:textColor="@android:color/black"
             tools:text="Beer Name" />
+        <ImageView
+            android:id="@+id/icon_iv"
+            android:layout_width="@dimen/entry_image_size"
+            android:layout_height="@dimen/entry_image_size"
+            android:layout_below="@id/beer_name"
+            android:layout_margin="5dp"
+            android:layout_alignParentStart="true"
+            tools:src="@mipmap/ic_beer_mug" />
 
         <TextView
             android:id="@+id/abv_desc_tv"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/beer_name"
+            android:layout_toEndOf="@id/icon_iv"
             android:layout_margin="5dp"
-            android:layout_alignParentStart="true"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@android:color/black"
             android:text="ABV:" />
@@ -52,8 +55,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/beer_name"
-            android:layout_margin="5dp"
             android:layout_toEndOf="@+id/abv_desc_tv"
+            android:layout_margin="5dp"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@android:color/black"
             tools:text="abv" />
@@ -63,8 +66,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/beer_name"
-            android:layout_margin="5dp"
             android:layout_toEndOf="@id/abv_tv"
+            android:layout_margin="5dp"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:textColor="@android:color/black"
             android:text="IBU:" />
@@ -85,11 +88,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/ibu_tv"
-            android:layout_alignParentStart="true"
-            android:layout_toStartOf="@+id/icon_iv"
+            android:layout_toEndOf="@id/icon_iv"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:textColor="@android:color/black"
-            tools:text="description" />
+            tools:text="description text that should be a little longer so it is easier to see how this looks when we have a full description" />
 
     </RelativeLayout>
 </android.support.v7.widget.CardView>

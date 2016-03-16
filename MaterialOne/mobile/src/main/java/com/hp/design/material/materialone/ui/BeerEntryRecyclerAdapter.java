@@ -43,14 +43,15 @@ public class BeerEntryRecyclerAdapter extends RecyclerView.Adapter<BeerEntryView
             //TODO: would this code make more sense in the ViewHolder object?
 
             Labels labels = beerElement.getLabels();
+            String url = null;
             if(null!=labels) {
-                final String url = labels.getIcon();
-                Picasso.with(mContextRef.get())
-                        .load(url)
-                        .placeholder(R.drawable.circle_red)
-                        .error(R.drawable.circle_light_grey)
-                        .into(holder.mIcon);
+                url = labels.getIcon();
             }
+            Picasso.with(mContextRef.get())
+                        .load(url)
+                        .placeholder(R.mipmap.ic_beer_mug)
+                        .error(R.mipmap.ic_launcher)
+                        .into(holder.mIcon);
             holder.mBeerName.setText(beerElement.getName());
             holder.mBeerPosition = position;
             holder.mAbv.setText(beerElement.getAbv());

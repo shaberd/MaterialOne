@@ -11,14 +11,12 @@ import android.util.Log;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ImageView;
 
 import com.hp.design.material.materialone.Constants;
 import com.hp.design.material.materialone.R;
 import com.hp.design.material.materialone.beer.pojo.Beer;
 import com.hp.design.material.materialone.beer.BreweryDB;
 import com.hp.design.material.materialone.beer.pojo.BeerElement;
-import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,7 +29,7 @@ import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-public class ScrollingActivity extends AppCompatActivity {
+public class BeersActivity extends AppCompatActivity {
 
     private static final String TAG = "asdf";
 
@@ -39,9 +37,6 @@ public class ScrollingActivity extends AppCompatActivity {
     RecyclerView mBeersRv;
     private final List<BeerElement> mBeersList = new ArrayList<>();
     private RecyclerView.Adapter<BeerEntryViewHolder> mBeersRvAdapter;
-
-    @Bind(R.id.banner_img)
-    ImageView mImageView;
 
     BreweryDB mBreweryDB;
     int mPageCount = 0;
@@ -51,7 +46,7 @@ public class ScrollingActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_scrolling);
+        setContentView(R.layout.activity_beers);
         ButterKnife.bind(this);
         mBeersRvAdapter = new BeerEntryRecyclerAdapter(getApplicationContext(), mBeersList);
         mLayoutManager = new LinearLayoutManager(getApplicationContext());
@@ -119,7 +114,6 @@ public class ScrollingActivity extends AppCompatActivity {
         mBeersRvAdapter.notifyDataSetChanged();
 
 
-        Picasso.with(getApplicationContext()).load(Constants.BANNER).into(mImageView);
         Retrofit retrofit = new Retrofit.Builder()
                 .baseUrl(Constants.BASE)
                 .addConverterFactory(GsonConverterFactory.create())

@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
     android:layout_height="match_parent" android:fitsSystemWindows="true"
-    tools:context=".ui.ScrollingActivity">
+    tools:context=".ui.BeersActivity">
 
     <android.support.design.widget.AppBarLayout android:id="@+id/app_bar"
         android:layout_width="match_parent" android:layout_height="@dimen/app_bar_height"
@@ -23,7 +23,7 @@
     </android.support.design.widget.AppBarLayout>
 
 
-    <include layout="@layout/content_scrolling" />
+    <include layout="@layout/content_beers" />
 
 
     <android.support.design.widget.FloatingActionButton android:id="@+id/fab"
