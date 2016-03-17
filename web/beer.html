@@ -20,27 +20,40 @@
 <script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
 <script src="beerDB.js"></script>
 <div data-ng-init="firstName='John'" ng-controller="myCtrl">
-    <md-toolbar class="md-scroll-shrink">
+    <title>{{title}}</title>
+    <H1>{{title}}</H1>
+<!--    <md-toolbar class="md-scroll-shrink">
         <div class="md-toolbar-tools">
             <h2 class="md-flex">{{title}}</h2>
         </div>
-    </md-toolbar>
+    </md-toolbar>-->
     <md-content flex layout-padding>
 
 
-        <md-button class="md-fab md-primary" aria-label="Use Android" md-direction="{{demo.selectedDirection}}">
-            <md-icon md-svg-src="img/icons/menu.svg"></md-icon>
-        </md-button>
-        <li ng-repeat="data in beer.data">
-          <b>{{data.nameDisplay}}</b><br/>
-            {{data.description}}
-        </li>
-        First Name: <input type="text" ng-model="firstName"><br>
-        Last Name: <input type="text" ng-model="lastName"><br>
-        Full Name: {{firstName + " " + lastName + beer.currentPage}}
+        <!--<md-button class="md-fab md-primary" aria-label="Use Android" md-direction="{{demo.selectedDirection}}">
+            <md-icon md-svg-src="img/icons/ic_beer_mug_white.svg"></md-icon>
+        </md-button>-->
+        <!--<li ng-repeat="data in beer.data">-->
+            <!--<h3>{{ data.nameDisplay }}</h3>-->
+            <!--<h4>abv: {{ data.abv }}</h4>-->
+            <!--<p>{{ data.description }}</p>-->
+        <!--</li>-->
+        <md-list flex>
+            <md-subheader class="md-no-sticky">3 line item</md-subheader>
+            <md-list-item class="md-3-line" ng-repeat="data in beer.data">
+                <div class="md-list-item-text" layout="column">
+                    <h3>{{ data.nameDisplay }}</h3>
+                    <h4>abv: {{ data.abv }}    ibu: {{ data.ibu }}</h4>
+                    <p>{{ data.description }}</p>
+                </div>
+            </md-list-item>
+            </md-list>
+        <!--First Name: <input type="text" ng-model="firstName"><br>-->
+        <!--Last Name: <input type="text" ng-model="lastName"><br>-->
+        <!--Full Name: {{firstName + " " + lastName + beer.currentPage}}-->
 
-        <p>The name is <span data-ng-bind="firstName"></span></p>
-        <p>My first expression: {{ 5 + 5 }}</p>
+        <!--<p>The name is <span data-ng-bind="firstName"></span></p>-->
+        <!--<p>My first expression: {{ 5 + 5 }}</p>-->
     </md-content>
     <!-- Your application bootstrap  -->
     <script type="text/javascript">
@@ -50,15 +63,15 @@
         var app = angular.module('BlankApp', ['ngMaterial', 'ngMessages']);
         app.controller('myCtrl', function ($scope ) {
             $scope.beer = beerDb;
-            $scope.firstName = "John ";
-            $scope.lastName = "Doe";
-            $scope.isOpen = false;
-            $scope.demo = {
-                isOpen: false,
-                count: 0,
-                selectedDirection: 'left'
-            };
-            $scope.title = "My Sweet WebPage";
+//            $scope.firstName = "John ";
+//            $scope.lastName = "Doe";
+//            $scope.isOpen = false;
+//            $scope.demo = {
+//                isOpen: false,
+//                count: 0,
+//                selectedDirection: 'left'
+//            };
+            $scope.title = "All my Beers";
         });
 
     </script>
