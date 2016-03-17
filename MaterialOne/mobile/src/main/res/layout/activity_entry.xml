@@ -23,6 +23,8 @@
 
     <include layout="@layout/content_entry" />
 
+
+    <!-- TODO: Show how to add this -->
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
