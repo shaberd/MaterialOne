@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Angular Material style sheet -->
+    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+</head>
+<body ng-app="BlankApp">
+<!--
+  Your HTML content here
+-->
+
+<!-- Angular Material requires Angular.js Libraries -->
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-animate.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-aria.min.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
+
+<!-- Angular Material Library -->
+<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+<script src="beerDB.js"></script>
+<div data-ng-init="firstName='John'" ng-controller="myCtrl">
+    <md-toolbar class="md-scroll-shrink">
+        <div class="md-toolbar-tools">
+            <h2 class="md-flex">{{title}}</h2>
+        </div>
+    </md-toolbar>
+    <md-content flex layout-padding>
+
+
+        <md-button class="md-fab md-primary" aria-label="Use Android" md-direction="{{demo.selectedDirection}}">
+            <md-icon md-svg-src="img/icons/menu.svg"></md-icon>
+        </md-button>
+        <li ng-repeat="data in beer.data">
+          <b>{{data.nameDisplay}}</b><br/>
+            {{data.description}}
+        </li>
+        First Name: <input type="text" ng-model="firstName"><br>
+        Last Name: <input type="text" ng-model="lastName"><br>
+        Full Name: {{firstName + " " + lastName + beer.currentPage}}
+
+        <p>The name is <span data-ng-bind="firstName"></span></p>
+        <p>My first expression: {{ 5 + 5 }}</p>
+    </md-content>
+    <!-- Your application bootstrap  -->
+    <script type="text/javascript">
+        /**
+         * You must include the dependency on 'ngMaterial'
+         */
+        var app = angular.module('BlankApp', ['ngMaterial', 'ngMessages']);
+        app.controller('myCtrl', function ($scope ) {
+            $scope.beer = beerDb;
+            $scope.firstName = "John ";
+            $scope.lastName = "Doe";
+            $scope.isOpen = false;
+            $scope.demo = {
+                isOpen: false,
+                count: 0,
+                selectedDirection: 'left'
+            };
+            $scope.title = "My Sweet WebPage";
+        });
+
+    </script>
+</div>
+</body>
+</html>
+
+
