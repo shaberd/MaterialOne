@@ -21,6 +21,6 @@ app.controller('myCtrl', function ($scope) {
     $scope.title = "All my Beers";
 });
 app.controller('TitleController', function ($scope) {
-    $scope.title = 'My App Title';
+    $scope.title = 'My Beer App';
     $scope.button = "add beer";
 });
