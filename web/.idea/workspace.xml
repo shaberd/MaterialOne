@@ -34,8 +34,8 @@
       <file leaf-file-name="beer.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/beer.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
+            <state relative-caret-position="225">
+              <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -53,8 +53,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myJs2.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myJs2.js">
+      <file leaf-file-name="demoJs.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/demoJs.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="180">
               <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
@@ -63,11 +63,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="myJs.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/myJs.js">
+      <file leaf-file-name="beerJs.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/beerJs.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
+            <state relative-caret-position="315">
+              <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -102,8 +102,9 @@
         <option value="$PROJECT_DIR$/myJs2.js" />
         <option value="$PROJECT_DIR$/myJs.js" />
         <option value="$PROJECT_DIR$/myCss.css" />
-        <option value="$PROJECT_DIR$/beer.html" />
         <option value="$PROJECT_DIR$/demo.html" />
+        <option value="$PROJECT_DIR$/beerJs.js" />
+        <option value="$PROJECT_DIR$/beer.html" />
       </list>
     </option>
   </component>
@@ -235,12 +236,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1458231565805</updated>
-      <workItem from="1458231566891" duration="16311000" />
+      <workItem from="1458231566891" duration="17204000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16311000" />
+    <option name="totallyTimeSpent" value="17204000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="62" y="24" width="1303" height="1576" extended-state="4" />
@@ -288,21 +289,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myJs2.js">
+    <entry file="file://$PROJECT_DIR$/demoJs.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
           <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myJs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="3" selection-start-line="18" selection-start-column="3" selection-end-line="18" selection-end-column="3" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -324,10 +315,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/beerJs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="31" selection-start-line="21" selection-start-column="31" selection-end-line="21" selection-end-column="31" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/beer.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="56" column="63" selection-start-line="56" selection-start-column="63" selection-end-line="56" selection-end-column="63" />
+        <state relative-caret-position="225">
+          <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
           <folding />
         </state>
       </provider>

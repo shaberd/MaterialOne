@@ -19,4 +19,5 @@ app.controller('myCtrl', function ($scope) {
 });
 app.controller('TitleController', function ($scope) {
     $scope.title = 'My App Title';
+    $scope.button = "add beer";
 });
