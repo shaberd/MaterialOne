@@ -5,8 +5,8 @@
  * You must include the dependency on 'ngMaterial'
  */
 var app = angular.module('BlankApp'
-    , ['ngMaterial', 'ngMdIcons','ngMessages']
-    // ,['ngMessages']
+    // , ['ngMaterial', 'ngMdIcons','ngMessages']
+    ,['ngMessages']
 );
 app.controller('myCtrl', function ($scope) {
     $scope.beer = beerDb;

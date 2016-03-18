@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Angular Material style sheet -->
-    <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">
+    <!--<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css">-->
     <link href="myCss.css">
 </head>
 <body ng-app="BlankApp" ng-controller="myCtrl">
@@ -14,43 +14,43 @@
 <script src="beerDB.js"></script>
 
 <!--basic web page start-->
-<!--<div ng-controller="TitleController">-->
-    <!--<title>{{title}}</title>-->
-    <!--<h2>{{title}}</h2>-->
-    <!--<button >{{button}}</button>-->
-<!--</div>-->
-<!--<li ng-repeat="data in beer.data">-->
-    <!--<h3>{{ data.nameDisplay }}</h3>-->
-    <!--<h4>abv: {{ data.abv }}</h4>-->
-    <!--<p>{{ data.description }}</p>-->
-<!--</li>-->
+<div ng-controller="TitleController">
+    <title>{{title}}</title>
+    <h2>{{title}}</h2>
+    <button >{{button}}</button>
+</div>
+<li ng-repeat="data in beer.data">
+    <h3>{{ data.nameDisplay }}</h3>
+    <h4>abv: {{ data.abv }}</h4>
+    <p>{{ data.description }}</p>
+</li>
 <!--basic web page end-->
 
 <!--material web start-->
 <!--https://material.angularjs.org/latest/demo/toolbar-->
-<md-toolbar md-scroll-shrink ng-controller="TitleController">
-    <h1 class="md-toolbar-tools" layout-align-gt-sm="center">{{title}}</h1>
-</md-toolbar>
+<!--<md-toolbar md-scroll-shrink ng-controller="TitleController">-->
+    <!--<h1 class="md-toolbar-tools" layout-align-gt-sm="center">{{title}}</h1>-->
+<!--</md-toolbar>-->
 
-<md-button class="md-fab md-fab-top-right" aria-label="{{button}}">
-    <md-icon md-svg-src="img/icons/ic_beer_mug_white.svg">{{button}}</md-icon>
-</md-button>
+<!--<md-button class="md-fab md-fab-top-right" aria-label="{{button}}">-->
+    <!--<md-icon md-svg-src="img/icons/ic_beer_mug_white.svg">{{button}}</md-icon>-->
+<!--</md-button>-->
 
 <!--https://material.angularjs.org/latest/demo/list-->
-<md-content flex layout="column" >
-    <md-list>
-        <!--<md-subheader class="md-no-sticky">Available Beers</md-subheader>-->
-        <md-list-item class="md-3-line" ng-repeat="data in beer.data">
-            <div class="md-list-item-text" layout="column">
-                <h3>{{ data.nameDisplay }}</h3>
-                <h4>abv: {{ data.abv }} ibu: {{ data.ibu }}</h4>
-                <p>{{ data.description }}</p>
-            </div>
-            <md-divider md-inset hide-sm ng-if="!$last"></md-divider>
-            <md-divider hide-gt-sm ng-if="!$last"></md-divider>
-        </md-list-item>
-    </md-list>
-</md-content>
+<!--<md-content flex layout="column" >-->
+    <!--<md-list>-->
+        <!--&lt;!&ndash;<md-subheader class="md-no-sticky">Available Beers</md-subheader>&ndash;&gt;-->
+        <!--<md-list-item class="md-3-line" ng-repeat="data in beer.data">-->
+            <!--<div class="md-list-item-text" layout="column">-->
+                <!--<h3>{{ data.nameDisplay }}</h3>-->
+                <!--<h4>abv: {{ data.abv }} ibu: {{ data.ibu }}</h4>-->
+                <!--<p>{{ data.description }}</p>-->
+            <!--</div>-->
+            <!--<md-divider md-inset hide-sm ng-if="!$last"></md-divider>-->
+            <!--<md-divider hide-gt-sm ng-if="!$last"></md-divider>-->
+        <!--</md-list-item>-->
+    <!--</md-list>-->
+<!--</md-content>-->
 <!--material web end-->
     <!--First Name: <input type="text" ng-model="firstName"><br>-->
     <!--Last Name: <input type="text" ng-model="lastName"><br>-->
@@ -70,9 +70,9 @@
 
 
 <!-- Angular Material Library https://material.angularjs.org/latest/ -->
-<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
+<!--<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>-->
 <!-- material icons -->
-<script src="http://cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>
+<!--<script src="http://cdn.jsdelivr.net/angular-material-icons/0.4.0/angular-material-icons.min.js"></script>-->
 <!-- Your application bootstrap  -->
 
 
