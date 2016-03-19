@@ -1,0 +1,74 @@
+//New Activity
+->blank Activity
+-> launcher Activity
+
+//HookupUI elements
+    @Bind(R.id.banner_img)
+    ImageView mImageView;
+
+    @Bind(R.id.webview)
+    WebView mWebview;
+
+//setup butterknife
+ButterKnife.bind(this);
+
+//connect Fab to BeersActivity
+startActivity(new Intent(getApplicationContext(), BeersActivity.class));
+
+//add onResume
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        mWebview.loadUrl("http://www.brewerydb.com/developers");
+        Picasso.with(getApplicationContext()).load(Constants.BANNER).into(mImageView);
+
+    }
+
+
+//add content to view
+ <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/banner_img"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:scaleX=".5"
+        android:scaleY=".5"
+        tools:src="@android:drawable/btn_star_big_off" />
+    <WebView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/webview"
+        android:layout_alignParentTop="true"
+        android:layout_above="@+id/banner_img"
+        />
+
+ //update FAB with new icon
+android:src="@mipmap/ic_beer_mug_white"
+
+
+
+//ADD FAB to BeersActivity and point to motion
+FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
+
+//fix FAB behavior
+startActivity(new Intent(getApplicationContext(), MotionActivity.class));
+
+//ADD FAB to activity_beers.xml
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@android:drawable/ic_input_add"
+            app:layout_anchor="@id/app_bar"
+            app:layout_anchorGravity="bottom|end" />
+
