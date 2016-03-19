@@ -5,9 +5,11 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.hp.design.material.materialone.R;
@@ -47,9 +49,13 @@ public class MotionActivityFragment extends Fragment {
 
     private List<String> initData(){
         List<String> data = new ArrayList<>();
-        data.add("ONE");
-        data.add("TWO");
-        data.add("THREE");
+        data.add("IPA");
+        data.add("Pale Ale");
+        data.add("Porter");
+        data.add("Stout");
+        data.add("Belgian");
+        data.add("Blonde");
+        data.add("Red Ale");
         return data;
     }
 
@@ -62,13 +68,13 @@ public class MotionActivityFragment extends Fragment {
 
         @Override
         public TheAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-            CardView v = (CardView)LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view_motion, parent, false);
+            View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.card_view_motion, parent, false);
             TheAdapter.ViewHolder viewHolder = new TheAdapter.ViewHolder(v);
             return viewHolder;
         }
 
         @Override
-        public void onBindViewHolder(ViewHolder holder, int position) {
+        public void onBindViewHolder(final ViewHolder holder, int position) {
             holder.mTextView.setText(mData.get(position));
         }
 
@@ -79,8 +85,25 @@ public class MotionActivityFragment extends Fragment {
 
         public class ViewHolder extends RecyclerView.ViewHolder{
             public TextView mTextView;
-            public ViewHolder(CardView v){
+            public CardView mCardView;
+            private LinearLayout mClickTarget;
+            public ViewHolder(View v){
                 super(v);
+                mCardView = (CardView) v.findViewById(R.id.card_view);
+                mClickTarget = (LinearLayout)v.findViewById(R.id.click_target);
+                mClickTarget.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        mCardView.setCardElevation(mCardView.getCardElevation()+5);
+                    }
+                });
+                mClickTarget.setOnLongClickListener(new View.OnLongClickListener() {
+                    @Override
+                    public boolean onLongClick(View v) {
+                        mCardView.setCardElevation(0);
+                        return true;
+                    }
+                });
                 mTextView = (TextView) v.findViewById(R.id.text_view_motion_card);
             }
         }
