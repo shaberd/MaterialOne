@@ -1,32 +1,9 @@
 //New Activity
-->blank Activity
--> launcher Activity
-
-//HookupUI elements
-    @Bind(R.id.banner_img)
-    ImageView mImageView;
-
-    @Bind(R.id.webview)
-    WebView mWebview;
-
-//setup butterknife
-ButterKnife.bind(this);
-
-//connect Fab to BeersActivity
-startActivity(new Intent(getApplicationContext(), BeersActivity.class));
-
-//add onResume
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        mWebview.loadUrl("http://www.brewerydb.com/developers");
-        Picasso.with(getApplicationContext()).load(Constants.BANNER).into(mImageView);
-
-    }
+->Basic Activity
+-> click launcher Activity
 
 
-//add content to view
+//add content to view in created activity (content_main.xml)
  <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -44,10 +21,48 @@ startActivity(new Intent(getApplicationContext(), BeersActivity.class));
         android:layout_above="@+id/banner_img"
         />
 
- //update FAB with new icon
+ //update FAB with new icon in (activity_main.xml)
 android:src="@mipmap/ic_beer_mug_white"
 
 
+//setup butterknife
+ButterKnife.bind(this);
+
+//HookupUI elements
+    @Bind(R.id.banner_img)
+    ImageView mImageView;
+
+    @Bind(R.id.webview)
+    WebView mWebview;
+
+//connect Fab to BeersActivity
+startActivity(new Intent(getApplicationContext(), BeersActivity.class));
+
+//add onResume
+
+@Override
+protected void onResume() {
+    super.onResume();
+    mWebview.loadUrl("http://www.brewerydb.com/developers");
+    Picasso.with(getApplicationContext()).load(Constants.BANNER).into(mImageView);
+
+}
+
+
+
+
+
+___________________________________________________
+
+//ADD FAB to activity_beers.xml
+    <android.support.design.widget.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/fab_margin"
+            android:src="@android:drawable/ic_input_add"
+            app:layout_anchor="@id/app_bar"
+            app:layout_anchorGravity="bottom|end" />
 
 //ADD FAB to BeersActivity and point to motion
 FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -62,13 +77,4 @@ FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //fix FAB behavior
 startActivity(new Intent(getApplicationContext(), MotionActivity.class));
 
-//ADD FAB to activity_beers.xml
-    <android.support.design.widget.FloatingActionButton
-            android:id="@+id/fab"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/fab_margin"
-            android:src="@android:drawable/ic_input_add"
-            app:layout_anchor="@id/app_bar"
-            app:layout_anchorGravity="bottom|end" />
 
