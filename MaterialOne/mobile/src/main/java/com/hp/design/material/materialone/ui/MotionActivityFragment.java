@@ -14,15 +14,13 @@ import android.widget.TextView;
 
 import com.hp.design.material.materialone.R;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-/**
- * A placeholder fragment containing a simple view.
- */
 public class MotionActivityFragment extends Fragment {
 
     @Bind(R.id.the_recycler_view)
@@ -50,12 +48,7 @@ public class MotionActivityFragment extends Fragment {
     private List<String> initData(){
         List<String> data = new ArrayList<>();
         data.add("IPA");
-        data.add("Pale Ale");
-        data.add("Porter");
-        data.add("Stout");
-        data.add("Belgian");
-        data.add("Blonde");
-        data.add("Red Ale");
+        //TODO: moar data
         return data;
     }
 
@@ -84,26 +77,13 @@ public class MotionActivityFragment extends Fragment {
         }
 
         public class ViewHolder extends RecyclerView.ViewHolder{
+            @Bind(R.id.text_view_motion_card)
             public TextView mTextView;
-            public CardView mCardView;
-            private LinearLayout mClickTarget;
+            //TODO: get the cardview and clicktarget linearlayout
             public ViewHolder(View v){
                 super(v);
-                mCardView = (CardView) v.findViewById(R.id.card_view);
-                mClickTarget = (LinearLayout)v.findViewById(R.id.click_target);
-                mClickTarget.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        mCardView.setCardElevation(mCardView.getCardElevation()+5);
-                    }
-                });
-                mClickTarget.setOnLongClickListener(new View.OnLongClickListener() {
-                    @Override
-                    public boolean onLongClick(View v) {
-                        mCardView.setCardElevation(0);
-                        return true;
-                    }
-                });
+                ButterKnife.bind(ViewHolder.this, v);
+                //TODO: set click listeners, increment setCardView elevation
                 mTextView = (TextView) v.findViewById(R.id.text_view_motion_card);
             }
         }
